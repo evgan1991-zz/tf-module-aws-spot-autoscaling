@@ -11,18 +11,6 @@ Creating autoscaling group on spots (or on standart instances) and add autoscali
 Automatically uses spot-instances if you set spot_price. Set param spot_price = "" to use standart instances
 Module uses [terraform-aws-autoscaling](https://github.com/terraform-aws-modules/terraform-aws-autoscaling) from [Terraform AWS modules](https://github.com/terraform-aws-modules), and adds aws_autoscaling_policy for scaling ASG.
 
-
-## Requirements:
-### For creating cluster (module eks-orchestration)
-* subnets_id
-
-### For creating metrics (autoscaling policy and cloudwatch metric alarm. Module AS_policys)
-* autoscaling group name
-* lists of scaling policys (4 types: SimpleScaling_policys, SimpleAlarmScaling_policys, StepScaling_policys, TargetTracking_policys)
-
-
-
-
 ## Usage
 
 ```hcl
